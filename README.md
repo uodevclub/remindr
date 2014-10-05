@@ -20,6 +20,9 @@ rails comes with a basic server, start it to make sure everything is working cor
 
 <code> rails s </code>
 
+go to <a href="http://0.0.0.0:3000/"> http://0.0.0.0:3000/ </a> in your browser. This is the default address of the rails server. if this dosn't work inspect your terminal. It should look like this:
+
+<img src="http://guides.rubyonrails.org/images/getting_started/rails_welcome.png">
 
 step 2:
 
