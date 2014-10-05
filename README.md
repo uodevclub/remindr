@@ -36,7 +36,7 @@ open 'remindr/app/config/routes.rb' in your text editor and add the following:
 
 
 
-step 3: Make the welcome controller
+### step 3: Make the welcome controller
 
 
 
