@@ -28,7 +28,7 @@ go to <a href="http://0.0.0.0:3000/"> http://0.0.0.0:3000/ </a> in your browser.
 
 routes conect url requests (http://...) with your mvc code.
 
-open 'remindr/app/config/routes.rb' in your text editor and add the following:
+open 'remindr/config/routes.rb' in your text editor and add the following:
 
 <code> root 'welcome#index' </code>
 
@@ -38,5 +38,18 @@ open 'remindr/app/config/routes.rb' in your text editor and add the following:
 
 ### step 3: Make the welcome controller
 
+rails has commmands that make making controllers easy called generators. 
+
+<code>rails generate controller welcome</code>
+
+now open up the file you've just created: 'reminder/app/controllers/welcome_controller.rb'
+
+make a new method called index:
+
+<code>
+  def index
+    
+  end
+</code>
 
 
