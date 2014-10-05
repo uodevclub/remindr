@@ -47,7 +47,7 @@ now open up the file you've just created: 'reminder/app/controllers/welcome_cont
 make a new method inside the welcome controller called index:
 
 <code>
-  def index <br>
+  def index </br> </br>
   end
 </code>
 
