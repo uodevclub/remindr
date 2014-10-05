@@ -24,8 +24,19 @@ go to <a href="http://0.0.0.0:3000/"> http://0.0.0.0:3000/ </a> in your browser.
 
 <img src="http://guides.rubyonrails.org/images/getting_started/rails_welcome.png">
 
-step 2:
+###step 2: Make a route
 
-step 3:
+routes conect url requests (http://...) with your mvc code.
+
+open 'remindr/app/config/routes.rb' in your text editor and add the following:
+
+<code> root 'welcome#index' </code>
+
+'root' tells rails what the homepage should be. 'welcome#index' means we want the index method of the welcome controller respond to the url request. You should get an error if you reload the home page at this point. This is because we havent created a welcome controller
+
+
+
+step 3: Make the welcome controller
+
 
 
