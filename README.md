@@ -56,4 +56,16 @@ rails assumes we have made a view called index in views/welcome/index.html.erb
 erb is a templating language that makes is easy to insert variabels into views. Just add .erb and rails will compile it to html when a new request is made.
 
 
+### step 4: index view
+
+
+### step 5: add the js and css
+
+
+### step 6: post method
+
+
+
+
+
 
