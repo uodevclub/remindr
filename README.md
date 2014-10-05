@@ -44,10 +44,10 @@ rails has commmands that make making controllers easy called generators.
 
 now open up the file you've just created: 'reminder/app/controllers/welcome_controller.rb'
 
-make a new method called index:
+make a new method inside the welcome controller called index:
 
 <code>
-  def index
+  def index <br>
   end
 </code>
 
