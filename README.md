@@ -57,12 +57,43 @@ erb is a templating language that makes is easy to insert variabels into views. 
 
 
 ### step 4: index view
+Write the code for our homepage in the index.html.erb file. You'll see that for the most part the syntax looks like standard HTML. 
 
+The differences however can be seen in any thing wrapped with <code><% %></code> .These statements allow us to introduce things like conditional logic:<br>
+<code><% if flash[:notice] %> </code> <br>
+and predefined Ruby helpers for common HTML elements:<br> 
+<code><%= form_tag("", method: "post") do %> </code>
 
 ### step 5: add the js and css
 
+CSS And Javascript will go into the stylesheets and javascripts folders respectively, which are underneath the assets folder.<br><br> 
+For CSS we are using the extremely common Bootstrap library to style our page. 
+For styles specific to our site, we will place them in the stylish-portfolio.css file.
+<br><br>
+You'll notice there is also welcome.css.scss file. This is a SASS file. SASS is a CSS preprocessor which lets you use features that don't exist in CSS like variables, nesting, mixins, and inheritance. We'll learn more about this later.
+
+
 
 ### step 6: post method
+When a user presses the submit button on the page, our erb template file directs it to call the function "post". (method: "post"). We implement the post method on the controller that is controlling this page; the welcome_controller we created earlier. 
+
+In welcome_controller.rb, type the following:
+<code>
+  def post </br> </br>
+  end
+</code>
+
+Now when the user submits their email, whatever we want to do with that email address is done in this method. Lets grab the email address in the params dictionary by using the name of the html form element that holds the email:
+<br><code>@quantity = params[:email]</code>
+
+Next we save this email address to our database.
+<br><code>@user = EmailList.create(email:"#{@quantity}")</code>
+
+Finally we need to display a new webpage for the user. Lets just put them back onto the same home page they came from.
+<br><code>render 'index'</code>
+
+And for icing on the cake, let's give them some visual confirmation that their email submission was successfull with a predefined Ruby function:
+<br><code>flash[:notice] = "thanks! we'll let you know as soon as we launch!"</code>
 
 
 
