@@ -1,26 +1,26 @@
 ## How to build the remindr landing page
 
-this readme will guide you through the process of making your own copy of the basic remindr landing page. The landing page will describe our fictional app remindr and let people signup for our email list.
+This readme will guide you through the process of making your own copy of the basic remindr landing page. The landing page will describe our fictional app remindr and let people signup for our email list.
 
 pre-reqs.
 
 
-### step 1: install rails and start the server
-Rails is a popular mvc framework which is based on the ruby programing language. If you havnt worked with it before, its cool you should download it: <a href="http://installrails.com/"> here</a>. The link will show you how.
+### step 1: Install Ruby, Rails, and start the server
+Rails is a popular MVC framework based on the Ruby programing language. If you don't already have Ruby and Rails, you can download <a href="http://installrails.com/"> here</a>. The link will show you how.
 
-once you have it installed open your terminal and navigate to the folder you would like to store your application in. For example on a mac:
+Once installed, open your terminal and navigate to the folder you would like to store your application in. For example on a Mac:
 
 <code>cd ~/Documents </code>
 
-now we'll run a command that will set up a basic rails file structure:
+Now we'll run a command that will set up a basic Rails file structure:
 
 <code> rail new remindr </code>
 
-rails comes with a basic server, start it to make sure everything is working correctly.
+Rails comes with a basic server, start it to make sure everything is working correctly:
 
 <code> rails s </code>
 
-go to <a href="http://0.0.0.0:3000/"> http://0.0.0.0:3000/ </a> in your browser. This is the default address of the rails server. if this dosn't work inspect your terminal. It should look like this:
+Go to <a href="http://0.0.0.0:3000/"> http://0.0.0.0:3000/ </a> in your browser. This is the default address of the Rails server. if this dosn't work inspect your terminal for any errors. The webpage should look like this:
 
 <img src="http://guides.rubyonrails.org/images/getting_started/rails_welcome.png">
 
