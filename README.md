@@ -2,10 +2,8 @@
 
 This readme will guide you through the process of making your own copy of the basic remindr landing page. The landing page will describe our fictional app remindr and let people signup for our email list.
 
-pre-reqs.
 
-
-### step 1: Install Ruby, Rails, and start the server
+### Step 1: Install Ruby, Rails, and start the server
 Rails is a popular MVC framework based on the Ruby programing language. If you don't already have Ruby and Rails, you can download <a href="http://installrails.com/"> here</a>. The link will show you how.
 
 Once installed, open your terminal and navigate to the folder you would like to store your application in. For example on a Mac:
@@ -24,42 +22,42 @@ Go to <a href="http://0.0.0.0:3000/"> http://0.0.0.0:3000/ </a> in your browser.
 
 <img src="http://guides.rubyonrails.org/images/getting_started/rails_welcome.png">
 
-###step 2: Make a route
+### Step 2: Make a route
 
-routes conect url requests (http://...) with your mvc code.
+Routes conect URL requests (http://...) with the rest of your code.
 
-open 'remindr/config/routes.rb' in your text editor and add the following:
+Open 'remindr/config/routes.rb' in your text editor and add the following:
 
 <code> root 'welcome#index' </code>
 
-'root' tells rails what the homepage should be. 'welcome#index' means we want the index method of the welcome controller respond to the url request. You should get an error if you reload the home page at this point. This is because we havent created a welcome controller
+The 'root' keyword tells rails what the homepage should be. We want 'welcome#index' to be the index method of the welcome controller. You should get an error if you reload the home page at this point. This is because we havent created a welcome controller
 
 
 
-### step 3: Make the welcome controller
+### Step 3: Make the welcome controller
 
 rails has commmands that make making controllers easy called generators. 
 
 <code>rails generate controller welcome</code>
 
-now open up the file you've just created: 'reminder/app/controllers/welcome_controller.rb'
+Open up the file you've just created: 'reminder/app/controllers/welcome_controller.rb'
 
-make a new method inside the welcome controller called index:
+Make a new method inside the welcome controller called index:
 
 <code>
   def index </br> </br>
   end
 </code>
 
-rails assumes we have made a view called index in views/welcome/index.html.erb
+Rails assumes we have made a view called index in views/welcome/index.html.erb
 
-erb is a templating language that makes is easy to insert variabels into views. Just add .erb and rails will compile it to html when a new request is made.
+Embedded Ruby (erb) is a templating language that makes it easy to insert variabels into your views. Just add .erb to the end of the filename and Rails will compile it to HTML when a new request is made.
 
 
-### step 4: index view
-Write the code for our homepage in the index.html.erb file. You'll see that for the most part the syntax looks like standard HTML. 
+### Step 4: Index view
+Write the code for our homepage in the index.html.erb file. You'll see that for the most part, the syntax looks like standard HTML. 
 
-The differences however can be seen in any thing wrapped with <code><% %></code> .These statements allow us to introduce things like conditional logic:<br>
+The differences can be seen in anything wrapped with these brackets: <code><% %></code>. These statements allow us to introduce things like conditional logic:<br>
 <code><% if flash[:notice] %> </code> <br>
 and predefined Ruby helpers for common HTML elements:<br> 
 <code><%= form_tag("", method: "post") do %> </code>
