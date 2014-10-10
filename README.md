@@ -62,17 +62,18 @@ The differences can be seen in anything wrapped with these brackets: <code><% %>
 and predefined Ruby helpers for common HTML elements:<br> 
 <code><%= form_tag("", method: "post") do %> </code>
 
-### step 5: add the js and css
+### Step 5: Add the JS and CSS
 
-CSS And Javascript will go into the stylesheets and javascripts folders respectively, which are underneath the assets folder.<br><br> 
-For CSS we are using the extremely common Bootstrap library to style our page. 
+CSS and Javascript will go into the stylesheets and javascripts folders respectively, which are underneath the assets folder. 
+
+For CSS we are using the <a href = "http://getbootstrap.com/" target = "_blank" >Twitter Bootstrap</a> library to style our page. 
 For styles specific to our site, we will place them in the stylish-portfolio.css file.
-<br><br>
+
 You'll notice there is also welcome.css.scss file. This is a SASS file. SASS is a CSS preprocessor which lets you use features that don't exist in CSS like variables, nesting, mixins, and inheritance. We'll learn more about this later.
 
 
 
-### step 6: post method
+### Step 6: Post method
 When a user presses the submit button on the page, our erb template file directs it to call the function "post". (method: "post"). We implement the post method on the controller that is controlling this page; the welcome_controller we created earlier. 
 
 In welcome_controller.rb, type the following:
@@ -81,13 +82,13 @@ In welcome_controller.rb, type the following:
   end
 </code>
 
-Now when the user submits their email, whatever we want to do with that email address is done in this method. Lets grab the email address in the params dictionary by using the name of the html form element that holds the email:
+Now when the user submits their email, whatever we want to do with that email address is done in this method. Lets grab the email address in the params dictionary by using the name of the HTML form element that holds the email:
 <br><code>@quantity = params[:email]</code>
 
-Next we save this email address to our database.
+Next, we save this email address to our database.
 <br><code>@user = EmailList.create(email:"#{@quantity}")</code>
 
-Finally we need to display a new webpage for the user. Lets just put them back onto the same home page they came from.
+Finally, we need to display a new webpage for the user. Let's just put them back onto the same home page they came from.
 <br><code>render 'index'</code>
 
 And for icing on the cake, let's give them some visual confirmation that their email submission was successfull with a predefined Ruby function:
